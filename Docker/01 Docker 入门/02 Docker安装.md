@@ -90,7 +90,7 @@ yum-config-manager \
     --add-repo \
     https://download.docker.com/linux/centos/docker-ce.repo
     
-国内的
+国内的  (一般使用国内的)
 yum-config-manager \
 	--add-repo \
 	http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo

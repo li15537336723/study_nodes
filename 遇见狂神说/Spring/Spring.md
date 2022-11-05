@@ -742,7 +742,7 @@ AOP(Aspect Oriented Pargraming)意为：面向切面编程，通过预编译方�
 
 ![image-20201122085102272](C:\Users\李祥鸿\AppData\Roaming\Typora\typora-user-images\image-20201122085102272.png)
 
-### 11.2、AOP在spring中的作用
+### 11.2、AOP在spring-中的作用
 
 提供声明式事务；允许用户自定义切面
 

@@ -389,7 +389,7 @@ docker run -d --name elasticsearch02 -p 9200:9200 -p 9300:9300 -e "discovery.typ
 ## docker 启动 Redis
 
 ```bash
-docker run -d --name redis -p 6379:6379 --restart=always redis redis-server --appendonly yes --requirepass "li12345..."
+docker run -d --name redis -p 6379:6379 --restart=always redis redis --appendonly yes --requirepass "li12345..."
 ```
 
 

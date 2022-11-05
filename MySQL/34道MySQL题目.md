@@ -569,16 +569,3 @@ UPDATE emp SET sal = sal * 1.1 WHERE TIMESTAMPDIFF(YEAR, hiredate, NOW()) > 30
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-

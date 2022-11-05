@@ -174,6 +174,37 @@ class Employee{
 
 
 
+## Hashmap 注意事项
+
+原生地数据类型在 Hash 表中是按照值传递地，非原生地数据类型在Hash表中是按照引用传递地
+
+```java
+HashMap<Integer, Integer> map = new HashMap<>();
+Integer a = 100;
+Integer b = 100;
+map.put(a, 100);
+System.out.println(map.containKey(b));	// true
+```
+
+解释：像 `Integer` `String` ` Dobble` 这样的数据类型是原生的，我们自定义的类作为 hash 的 key 值，那么我们自定义的就不是原生的。
+
+```java
+class Zuo {
+    private int vlaue;
+    public Zuo(int v){
+        value = v;
+    }
+}
+
+public class Test {
+    HashMap<Zuo, String> test = new HashMap<>();
+    Zuo z1 = new Zuo(1);
+    Zuo z2 = new Zuo(1);
+    test.put(z1, "I am z1");
+    System.out.println(test.containKey(z2));	// false
+}
+```
+
 
 
 
