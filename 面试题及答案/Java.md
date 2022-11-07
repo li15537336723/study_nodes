@@ -169,9 +169,30 @@ public boolean contains(Object o) {
 
 
 
+## 13、HashMap 与 ConcurrentMap添加数据的不同
 
+ConcurrentHashMap 接口继承了 Map 接口，在 Map 接口的基础上定义了四个方法
 
+```java
+public interface ConcurrentMap<K, V> extends Map<K, V> {
+    //插入元素
+    V putIfAbsent(K key, V value);
+    //移除元素
+    boolean remove(Object key, Object value);
+    //替换元素
+    boolean replace(K key, V oldValue, V newValue);
+    //替换元素
+    V replace(K key, V value);   
+}
+```
 
+`putIfAbsent`：与原有的 put 方法不同的是，`putIfAbsent` 方法中如果插入的 key 是相同的，则不替换原来的value值
+
+`remove`：与原有的 remove 方法不同的是，新 remove 方法中增加了对 value的判断，如果要删除的 key-value 崩与 Map 中原来的 key-value 对应上，则不会删除该元素
+
+`replace(K,V,V)`：增加了对 value 值的判断，如果 key-value 能与 Map 中原有的 key-value 对应上，才进行替换操作
+
+`replace(K, V)`：与上面的 replace 不同的是，此 replace 不会对 Map 中原有的key-value进行比较，如果 key 存在则直接替换
 
 
 
